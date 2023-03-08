@@ -119,9 +119,9 @@
             <div>
                 <h3>Shape</h3>
                 <div class="space-y-6">
-                    <SelectCustom label="City" v-model="data.values" :options="cities" defaultOption="Select city" errorMsg="This is an error message"/>
-                    <SelectCustom label="City" v-model="data.values" :options="cities" defaultOption="Select city" shape="rounded" errorMsg="This is an error message"/>
-                    <SelectCustom label="City" v-model="data.values" :options="cities" defaultOption="Select city" shape="pill" errorMsg="This is an error message"/>
+                    <Select label="City" v-model="data.values" :options="cities" defaultOption="Select city" errorMsg="This is an error message"/>
+                    <Select label="City" v-model="data.values" :options="cities" defaultOption="Select city" shape="rounded" errorMsg="This is an error message"/>
+                    <Select label="City" v-model="data.values" :options="cities" defaultOption="Select city" shape="pill" errorMsg="This is an error message"/>
                 </div>
             </div>
         </div>
@@ -173,7 +173,7 @@ import Input from './components/Input.vue';
 import Button from './components/Button.vue';
 import Radio from './components/Radio.vue';
 import Checkbox from './components/Checkbox.vue';
-import SelectCustom from './components/SelectCustom.vue';
+import Select from './components/Select.vue';
 
 const data = reactive({
     inputValue: null,

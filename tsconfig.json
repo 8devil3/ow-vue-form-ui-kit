@@ -15,6 +15,7 @@
         "src/*.vue",
         "src/OLD/*",
         "src/main.ts",
+        "src/assets/*"
     ],
     "references": [
         {
