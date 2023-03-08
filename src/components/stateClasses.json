@@ -1,0 +1,116 @@
+{
+    "buttons": {
+        "shapes": {
+            "squared": "rounded-none",
+            "rounded": "rounded-md",
+            "pill": "rounded-full"
+        },
+        "solid": {
+            "primary": "border-2 border-primary bg-primary focus:outline-primary/30 dark:focus:outline-primaryDark/30 dark:bg-primaryDark dark:border-primaryDark",
+            "secondary": "border-2 border-secondary bg-secondary focus:outline-secondary/30 dark:focus:outline-secondaryDark/30 dark:bg-secondaryDark dark:border-secondaryDark",
+            "tertiary": "border-2 border-tertiary bg-tertiary focus:outline-tertiary/30 dark:focus:outline-tertiaryDark/30 dark:bg-tertiaryDark dark:border-tertiaryDark",
+            "quaternary": "border-2 border-quaternary bg-quaternary focus:outline-quaternary/30 dark:focus:outline-quaternaryDark/30 dark:bg-quaternaryDark dark:border-quaternaryDark",
+            "neutral1": "border-2 border-neutral1 bg-neutral1 focus:outline-neutral1/30 dark:focus:outline-neutral1Dark/30 dark:bg-neutral1Dark dark:border-neutral1Dark",
+            "neutral2": "border-2 border-neutral2 bg-neutral2 focus:outline-neutral2/30 dark:focus:outline-neutral2Dark/30 dark:bg-neutral2Dark dark:border-neutral2Dark",
+            "label": "border-2 border-label bg-label focus:outline-label/30 dark:focus:outline-labelDark/30 dark:bg-labelDark dark:border-labelDark",
+            "placeholder": "border-2 border-placeholder bg-placeholder focus:outline-placeholder/30 dark:focus:outline-placeholderDark/30 dark:bg-placeholderDark dark:border-placeholderDark",
+            "info": "border-2 border-info bg-info focus:outline-info/30 dark:focus:outline-infoDark/30 dark:bg-infoDark dark:border-infoDark",
+            "success": "border-2 border-success bg-success focus:outline-success/30 dark:focus:outline-successDark/30 dark:bg-successDark dark:border-successDark",
+            "warning": "border-2 border-warning bg-warning focus:outline-warning/30 dark:focus:outline-warningDark/30 dark:bg-warningDark dark:border-warningDark",
+            "danger": "border-2 border-danger bg-danger focus:outline-danger/30 dark:focus:outline-dangerDark/30 dark:bg-dangerDark dark:border-dangerDark"
+        },
+        "outline": {
+            "primary": "border-2 bg-primary/10 border-primary focus:outline-primary/30 dark:bg-primaryDark/10 dark:focus:outline-primaryDark/30 dark:border-primaryDark",
+            "secondary": "border-2 bg-secondary/10 border-secondary focus:outline-secondary/30 dark:bg-secondaryDark/10 dark:focus:outline-secondaryDark/30 dark:border-secondaryDark",
+            "tertiary": "border-2 bg-tertiary/10 border-tertiary focus:outline-tertiary/30 dark:bg-tertiaryDark/10 dark:focus:outline-tertiaryDark/30 dark:border-tertiaryDark",
+            "quaternary": "border-2 bg-quaternary/10 border-quaternary focus:outline-quaternary/30 dark:bg-quaternaryDark/10 dark:focus:outline-quaternaryDark/30 dark:border-quaternaryDark",
+            "neutral1": "border-2 bg-neutral1/10 border-neutral1 focus:outline-neutral1/30 dark:bg-neutral1Dark/10 dark:focus:outline-neutral1Dark/30 dark:border-neutral1Dark",
+            "neutral2": "border-2 bg-neutral2/10 border-neutral2 focus:outline-neutral2/30 dark:bg-neutral2Dark/10 dark:focus:outline-neutral2Dark/30 dark:border-neutral2Dark",
+            "label": "border-2 bg-label/10 border-label focus:outline-label/30 dark:bg-labelDark/10 dark:focus:outline-labelDark/30 dark:border-labelDark",
+            "placeholder": "border-2 bg-placeholder/10 border-placeholder focus:outline-placeholder/30 dark:bg-placeholderDark/10 dark:focus:outline-placeholderDark/30 dark:border-placeholderDark",
+            "info": "border-2 bg-info/10 border-info focus:outline-info/30 dark:focus:outline-infoDark/30 dark:bg-infoDark/10 dark:border-infoDark",
+            "success": "border-2 bg-success/10 border-success focus:outline-success/30 dark:bg-successDark/10 dark:focus:outline-successDark/30 dark:border-successDark",
+            "warning": "border-2 bg-warning/10 border-warning focus:outline-warning/30 dark:bg-warningDark/10 dark:focus:outline-warningDark/30 dark:border-warningDark",
+            "danger": "border-2 bg-danger/10 border-danger focus:outline-danger/30 dark:bg-dangerDark/10 dark:focus:outline-dangerDark/30 dark:border-dangerDark"
+        }
+    },
+    "inputs": {
+        "shapes": {
+            "linear": "px-0 py-0.5 md:px-0 md:py-0.5 border-0 border-b focus:border-b",
+            "rounded": "rounded-md px-2 md:px-3 py-1.5 border",
+            "pill": "rounded-full px-3 md:px-4 py-1.5 border"
+        },
+        "mainColors": {
+            "primary": "border-primary dark:border-primaryDark",
+            "secondary": "border-secondary dark:border-secondaryDark",
+            "tertiary": "border-tertiary dark:border-tertiaryDark",
+            "quaternary": "border-quaternary dark:border-quaternaryDark",
+            "neutral1": "border-neutral1 dark:border-neutral1Dark",
+            "neutral2": "border-neutral2 dark:border-neutral2Dark",
+            "label": "border-label dark:border-labelDark",
+            "placeholder": "border-placeholder dark:border-placeholderDark",
+            "info": "border-info dark:border-infoDark",
+            "success": "border-success dark:border-successDark",
+            "warning": "border-warning dark:border-warningDark",
+            "danger": "border-danger dark:border-dangerDark"
+        },
+        "focusColors": {
+            "primary": "focus:bg-primary/10 focus:border-primary focus:ring-transparent dark:focus:bg-primaryDark/10 dark:focus:border-primaryDark",
+            "secondary": "focus:ring-secondary/30 dark:focus:ring-secondaryDark/30",
+            "tertiary": "focus:ring-tertiary/30 dark:focus:ring-tertiaryDark/30",
+            "quaternary": "focus:ring-quaternary/30 dark:focus:ring-quaternaryDark/30",
+            "neutral1": "focus:ring-neutral1/30 dark:focus:ring-neutral1Dark/30",
+            "neutral2": "focus:ring-neutral2/30 dark:focus:ring-neutral2Dark/30",
+            "label": "focus:ring-label/30 dark:focus:ring-labelDark/30",
+            "placeholder": "focus:ring-placeholder/30 dark:focus:ring-placeholderDark/30",
+            "info": "focus:ring-info/30 dark:focus:ring-infoDark/30",
+            "success": "focus:ring-success/30 dark:focus:ring-successDark/30",
+            "warning": "focus:ring-warning/30 dark:focus:ring-warningDark/30",
+            "danger": "focus:ring-danger/30 dark:focus:ring-dangerDark/30"
+        },
+        "labelColors": {
+            "primary": "text-primary dark:text-primaryDark",
+            "secondary": "text-secondary dark:text-secondaryDark",
+            "tertiary": "text-tertiary dark:text-tertiaryDark",
+            "quaternary": "text-quaternary dark:text-quaternaryDark",
+            "neutral1": "text-neutral1 dark:text-neutral1Dark",
+            "neutral2": "text-neutral2 dark:text-neutral2Dark",
+            "label": "text-label dark:text-labelDark",
+            "placeholder": "text-placeholder dark:text-placeholderDark",
+            "info": "text-info dark:text-infoDark",
+            "success": "text-success dark:text-successDark",
+            "warning": "text-warning dark:text-warningDark",
+            "danger": "text-danger dark:text-dangerDark"
+        },
+        "listColors": {
+            "primary": "bg-primary dark:bg-primaryDark",
+            "secondary": "bg-secondary dark:bg-secondaryDark",
+            "tertiary": "bg-tertiary dark:bg-tertiaryDark",
+            "quaternary": "bg-quaternary dark:bg-quaternaryDark",
+            "neutral1": "bg-neutral1 dark:bg-neutral1Dark",
+            "neutral2": "bg-neutral2 dark:bg-neutral2Dark",
+            "label": "bg-label dark:bg-labelDark",
+            "placeholder": "bg-placeholder dark:bg-placeholderDark",
+            "info": "bg-info dark:bg-infoDark",
+            "success": "bg-success dark:bg-successDark",
+            "warning": "bg-warning dark:bg-warningDark",
+            "danger": "bg-danger dark:bg-dangerDark"
+        }
+    },
+    "radios": {
+        "mainColors": {
+            "primary": "border-primary text-primary focus:ring-primary/50 focus-visible:ring-primary/50 dark:border-primaryDark dark:text-primaryDark dark:focus:ring-primaryDark/50 dark:focus-visible:ring-primaryDark/50",
+            "secondary": "border-secondary text-secondary focus:ring-secondary/50 focus-visible:ring-secondary/50 dark:border-secondaryDark dark:text-secondaryDark dark:focus:ring-secondaryDark/50 dark:focus-visible:ring-secondaryDark/50",
+            "tertiary": "border-tertiary text-tertiary focus:ring-tertiary/50 focus-visible:ring-tertiary/50 dark:border-tertiaryDark dark:text-tertiaryDark dark:focus:ring-tertiaryDark/50 dark:focus-visible:ring-tertiaryDark/50",
+            "quaternary": "border-quaternary text-quaternary focus:ring-quaternary/50 focus-visible:ring-quaternary/50 dark:border-quaternaryDark dark:text-quaternaryDark dark:focus:ring-quaternaryDark/50 dark:focus-visible:ring-quaternaryDark/50",
+            "neutral1": "border-neutral1 text-neutral1 focus:ring-neutral1/50 focus-visible:ring-neutral1/50 dark:border-neutral1Dark dark:text-neutral1Dark dark:focus:ring-neutral1Dark/50 dark:focus-visible:ring-neutral1Dark/50",
+            "neutral2": "border-neutral2 text-neutral2 focus:ring-neutral2/50 focus-visible:ring-neutral2/50 dark:border-neutral2Dark dark:text-neutral2Dark dark:focus:ring-neutral2Dark/50 dark:focus-visible:ring-neutral2Dark/50",
+            "label": "border-label text-label focus:ring-label/50 focus-visible:ring-label/50 dark:border-labelDark dark:text-labelDark dark:focus:ring-labelDark/50 dark:focus-visible:ring-labelDark/50",
+            "placeholder": "border-placeholder text-placeholder focus:ring-placeholder/50 focus-visible:ring-placeholder/50 dark:border-placeholderDark dark:text-placeholderDark dark:focus:ring-placeholderDark/50 dark:focus-visible:ring-placeholderDark/50",
+            "info": "border-info text-info focus:ring-info/50 focus-visible:ring-info/50 dark:border-infoDark dark:text-infoDark dark:focus:ring-infoDark/50 dark:focus-visible:ring-infoDark/50",
+            "success": "border-success text-success focus:ring-success/50 focus-visible:ring-success/50 dark:border-successDark dark:text-successDark dark:focus:ring-successDark/50 dark:focus-visible:ring-successDark/50",
+            "warning": "border-warning text-warning focus:ring-warning/50 focus-visible:ring-warning/50 dark:border-warningDark dark:text-warningDark dark:focus:ring-warningDark/50 dark:focus-visible:ring-warningDark/50",
+            "danger": "border-danger text-danger focus:ring-danger/50 focus-visible:ring-danger/50 dark:border-dangerDark dark:text-dangerDark dark:focus:ring-dangerDark/50 dark:focus-visible:ring-dangerDark/50"
+        }
+    }
+}
