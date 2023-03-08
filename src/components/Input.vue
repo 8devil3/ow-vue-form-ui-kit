@@ -50,7 +50,7 @@
                 :class="[props.shape === 'linear' ? 'right-2' : 'right-4', props.icon, props.iconColor.charAt(0) === '#' ? 'iconColor' : props.iconColor], {'text-opacity-50' : props.disabled}"></i>
         </div>
 
-        <div class="flex items-start justify-between mt-1 px-2" :class="{'px-3 md:px-4' : props.shape === 'pill'}">
+        <div class="flex items-start justify-between mt-1" :class="[{'px-3 md:px-4' : props.shape === 'pill'}, {'px-2' : props.shape === 'rounded'}]">
             <span v-if="props.errorMsg" class="text-xs md:text-sm font-normal text-left text-danger">
                 {{ props.errorMsg }}
             </span>
