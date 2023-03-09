@@ -3,7 +3,7 @@
         <label
             v-if="props.shape === 'linear'"
             :for="props.id"
-            class="absolute left-0 text-sm block transition-transform origin-top-left md:text-base leading-none"
+            class="absolute left-0 block text-sm leading-none transition-transform origin-top-left md:text-base"
             :class="[data.labelclasses, {'text-opacity-50' : props.disabled}]"
         >
             {{ props.label }} 
@@ -14,7 +14,7 @@
         <label
             v-else-if="props.shape !== 'linear' && props.label"
             :for="props.id"
-            class="text-xs md:text-sm leading-none text-label block dark:text-labelDark px-2 mb-1"
+            class="block px-2 mb-1 text-xs leading-none md:text-sm text-label dark:text-labelDark"
             :class="[{'text-opacity-50' : props.disabled}, {'pl-3 md:pl-4' : props.shape === 'pill'}]"
         >
             {{ props.label }} 
@@ -28,18 +28,20 @@
 
             <button
                 @click.stop="data.open = !data.open"
-                class="w-full text-left z-10 absolute inset-0 appearance-none text-sm bg-transparent md:text-base focus:ring-2 focus:outline-none focus-visible:outline-none placeholder:text-placeholder disabled:placeholder-opacity-50 disabled:border-opacity-50 leading-none text-opacity-50 cursor-pointer pr-6 md:pr-8"
+                class="absolute inset-0 z-10 w-full pr-6 text-sm leading-none text-left text-opacity-50 bg-transparent appearance-none cursor-pointer md:text-base focus:ring-2 focus:outline-none focus-visible:outline-none disabled:placeholder-opacity-50 disabled:border-opacity-50 md:pr-8"
                 :class="[stateClasses.inputs.shapes[props.shape], stateClasses.inputs.mainColors[props.mainColor], stateClasses.inputs.focusColors[props.focusColor]]"
                 :aria-label="props.label"
                 :aria-placeholder="props.defaultOption"
                 :aria-required="props.required"
                 ref="select"
             >
-                {{ props.modelValue ? props.modelValue : props.defaultOption }}
+                <template v-if="props.modelValue">{{ props.modelValue }}</template>
+
+                <span v-else class="text-placeholder">{{ props.defaultOption }}</span>
             </button>
 
             <i
-                class="text-xs md:text-sm absolute top-1/2 -translate-y-1/2 fa-solid fa-chevron-down text-primary dark:text-primaryDark"
+                class="absolute text-xs -translate-y-1/2 md:text-sm top-1/2 fa-solid fa-chevron-down text-primary dark:text-primaryDark"
                 :class="[props.shape === 'linear' ? 'right-2' : 'right-4', {'text-opacity-50' : props.disabled}]"
             ></i>
     
@@ -51,14 +53,14 @@
             >
             <div
                 v-if="data.open"
-                class="transition-opacity z-50 overflow-hidden absolute inset-x-0 shadow-lg border border-primary dark:border-primaryDark"
+                class="absolute inset-x-0 z-50 overflow-hidden transition-opacity border shadow-lg border-primary dark:border-primaryDark"
                 :class="[stateClasses.inputs.listColors[props.listColor], props.shape !== 'linear' ? 'top-10 rounded-md' : 'top-8 rounded-none']"
             >
                 <ul class="py-1 overflow-y-auto overscroll-contain max-h-80">
                     <li v-for="option in props.options">
                         <button
                             @click="emits('update:model-value', option), data.open = false, data.selectedValue = option"
-                            class="w-full flex items-center justify-between text-left px-4 py-1 hover:bg-primary dark:hover:bg-primaryDark"
+                            class="flex items-center justify-between w-full px-4 py-1 text-left hover:bg-primary dark:hover:bg-primaryDark"
                         >
                             {{ option }}
                         </button>
@@ -69,7 +71,7 @@
         </div>
 
         <span v-if="props.errorMsg"
-            class="mt-1 text-xs md:text-sm font-normal text-left text-danger"
+            class="mt-1 text-xs font-normal text-left md:text-sm text-danger"
             :class="[{'px-2' : props.shape === 'rounded'}, {'px-3 md:px-4' : props.shape === 'pill'}]"
         >
             {{ props.errorMsg }}
@@ -123,22 +125,6 @@ const props = defineProps({
     id: {
         type: String,
         default: null
-    },
-    autocomplete: {
-        type: String,
-        default: 'on'
-    },
-    autofocus: {
-        type: Boolean,
-        default: false
-    },
-    icon: {
-        type: String,
-        default: null
-    },
-    required: {
-        type: Boolean,
-        default: false
     },
     errorMsg: {
         type: String,
