@@ -37,7 +37,7 @@
             >
                 <template v-if="props.modelValue">{{ props.modelValue }}</template>
 
-                <span v-else class="text-placeholder">{{ props.defaultOption }}</span>
+                <span v-else class="text-placeholder dark:text-placeholderDark">{{ props.defaultOption }}</span>
             </button>
 
             <i
@@ -120,7 +120,7 @@ const props = defineProps({
     },
     options: {
         type: Array,
-        default: null,
+        default: [],
     },
     id: {
         type: String,
