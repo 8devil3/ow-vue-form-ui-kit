@@ -3,7 +3,7 @@
         <label
             v-if="props.shape === 'linear'"
             :for="props.id"
-            class="absolute left-0 text-sm block transition-transform origin-top-left md:text-base leading-none"
+            class="absolute left-0 block text-sm leading-none transition-transform origin-top-left md:text-base"
             :class="[data.labelclasses, {'text-opacity-50' : props.disabled}]"
         >
             {{ props.label }} 
@@ -14,7 +14,7 @@
         <label
             v-else
             :for="props.id"
-            class="text-xs md:text-sm leading-none text-label block dark:text-labelDark px-2 mb-1"
+            class="block px-2 mb-1 text-xs leading-none md:text-sm text-label dark:text-labelDark"
             :class="[{'text-opacity-50' : props.disabled}, {'px-3 md:px-4' : props.shape === 'pill'}]"
         >
             {{ props.label }} 
@@ -30,6 +30,7 @@
                 :autocomplete="props.autocomplete"
                 :min="props.type === 'number' ? props.min : null"
                 :max="props.type === 'number' ? props.max : null"
+                :step="props.type === 'number' ? props.step : null"
                 :disabled="props.disabled"
                 :pattern="props.pattern"
                 :required="props.required"
@@ -38,7 +39,7 @@
                 ref="input"
                 :value="props.modelValue"
                 @input="labelClasses($event.target.value), emits('update:model-value', $event.target.value)"
-                class="w-full text-sm bg-transparent md:text-base focus:ring-2 focus:outline-none focus-visible:outline-none placeholder:text-placeholder disabled:placeholder-opacity-50 disabled:border-opacity-50 leading-none text-opacity-50"
+                class="w-full text-sm leading-none text-opacity-50 bg-transparent md:text-base focus:ring-2 focus:outline-none focus-visible:outline-none placeholder:text-placeholder disabled:placeholder-opacity-50 disabled:border-opacity-50"
                 :class="[{'pr-6 md:pr-8' : props.icon}, stateClasses.inputs.shapes[props.shape], stateClasses.inputs.mainColors[props.mainColor], stateClasses.inputs.focusColors[props.focusColor]]"
                 :aria-label="props.label"
                 :aria-placeholder="props.placeholder"
@@ -46,12 +47,12 @@
             />
     
             <i
-                class="text-xs md:text-sm absolute top-1/2 -translate-y-1/2"
+                class="absolute text-xs -translate-y-1/2 md:text-sm top-1/2"
                 :class="[props.shape === 'linear' ? 'right-2' : 'right-4', props.icon, props.iconColor.charAt(0) === '#' ? 'iconColor' : props.iconColor], {'text-opacity-50' : props.disabled}"></i>
         </div>
 
         <div class="flex items-start justify-between mt-1" :class="[{'px-3 md:px-4' : props.shape === 'pill'}, {'px-2' : props.shape === 'rounded'}]">
-            <span v-if="props.errorMsg" class="text-xs md:text-sm font-normal text-left text-danger">
+            <span v-if="props.errorMsg" class="text-xs font-normal text-left md:text-sm text-danger">
                 {{ props.errorMsg }}
             </span>
     
@@ -114,6 +115,10 @@ const props = defineProps({
     max: {
         type: Number,
         default: 100
+    },
+    step: {
+        type: Number,
+        default: 1
     },
     autocomplete: {
         type: String,
