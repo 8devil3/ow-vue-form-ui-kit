@@ -1,6 +1,6 @@
 <template>
-    <button @click="toggleDarkMode()" class="bg-zinc-300 py-2 px-4 w-fit h-fit text-black">dark/light</button>
-    <div class="max-w-4xl p-6 mx-auto mt-4 grid grid-cols-1 md:grid-cols-2 gap-16 dark:bg-gray-900 dark:text-zinc-200">
+    <button @click="toggleDarkMode()" class="px-4 py-2 text-black bg-zinc-300 w-fit h-fit">dark/light</button>
+    <div class="grid max-w-4xl grid-cols-1 gap-16 p-6 mx-auto mt-4 md:grid-cols-2 dark:bg-gray-900 dark:text-zinc-200">
 
         <!-- input -->
         <div class="space-y-6">
@@ -131,7 +131,7 @@
         <div class="space-y-4">
             <h2>Radios & checkboxes</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div class="space-y-2">
                     <h3>Radio</h3>
                     <Radio v-for="city, id in cities" :label="city" :id="'city-' + id" name="city" v-model:checked="data.radio" :value="city" subLabel="Text under label"/>
@@ -139,7 +139,7 @@
     
                 <div class="space-y-2">
                     <h3>Checkbox</h3>
-                    <Checkbox v-for="city, id in cities" :label="city" :id="'city-2-' + id" v-model:checked="data.checkbox" :value="city" subLabel="Text under label"/>
+                    <Checkbox v-for="city, id in cities" :label="city" :id="'city-2-' + id" name="city-check" v-model:checked="data.checkbox" :value="city" subLabel="Text under label"/>
                 </div>
             </div>
         </div>

@@ -1,11 +1,12 @@
 <template>
-    <label :for="props.id" class="flex items-start gap-2 cursor-pointer leading-none w-fit py-1">
+    <label :for="props.id" class="flex items-start gap-2 py-1 leading-none cursor-pointer w-fit">
         <input
             :id="props.id"
             type="checkbox"
             v-model="proxyChecked"
             :value="props.value"
-            class="h-4 w-4 border-2 focus:outline-none focus-visible:outline-none appearance-none rounded-sm cursor-pointer bg-transparent focus:ring-offset-transparent"
+            :name="props.name"
+            class="w-4 h-4 bg-transparent border-2 rounded-sm appearance-none cursor-pointer focus:outline-none focus-visible:outline-none focus:ring-offset-transparent"
             :class="stateClasses.radios.mainColors[props.mainColor]"
         />
         <span class="flex flex-col md:gap-1 gap-0.5">
@@ -43,6 +44,10 @@ const props = defineProps({
     mainColor: {
         type: String,
         default: 'primary'
+    },
+    name: {
+        type: String,
+        default: null
     },
 })
 
