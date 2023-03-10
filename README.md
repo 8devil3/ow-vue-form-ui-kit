@@ -13,7 +13,7 @@ A simple UI form components for Vue 3 based entirely on Tailwind CSS. It include
 - Components are styled and set with props
 
 ## Demo
-[Demo](https://www.tailwindtoolset.app/ow-vue-form-ui-kit)
+[Demo](https://www.tailwindtoolset.app)
 
 ## Requirements
 Vue 3.x, Font Awesome, Tailwind CSS 3.x and Tailwind CSS Form Plugin (see [Acknowledgements](#acknowledgements))
