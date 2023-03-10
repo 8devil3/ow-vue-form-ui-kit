@@ -1,5 +1,5 @@
 # OrangeVue Form UI kit
-A simple UI form components for Vue 3 based entirely on Tailwind CSS. It includes:
+A completely free simple UI form components for Vue 3 based entirely on Tailwind CSS. It includes:
 - Input
 - Button
 - Dropdown
