@@ -85,7 +85,7 @@ const data = reactive({
     dropdownValue: 'Milano',
     radioValue: 'Torino',
     checkboxValues: ['Torino', 'Firenze'],
-})
+});
 
 const cities = ['Milano', 'Roma', 'Firenze', 'Torino', 'Bologna'];
 </script>
@@ -98,34 +98,34 @@ const cities = ['Milano', 'Roma', 'Firenze', 'Torino', 'Bologna'];
 ### Inputs
 | Props | Type | Default | Values | Description |
 | :---- | :--- | :------ | :----- | :---------- |
-|` shape`  | `String` | `linear` | `linear, rounded, pill` | Input shape. |
-|` type` | `String` | `linear` | `text, url, email, password, tel, search` | Input type. |
-|` label` | `String` | `null` | Any string | Input label content. |
-|` name` | `String` | `linear` | Any string | Input name attribute. |
-|` mainColor` | `String` | `neutral1` | One of the twelve predefined colors | Input border in normal state. |
-|` focusColor` | `String` | `primary` | One of the twelve predefined colors | Input border and background in focus state. |
-|` placeholder` | `String` | `null` | Any string | Content of input placeholder. If shape="linear", placeholder will not display; the label is used instead. |
-|` id` | `String` | `linear` | `Any string` | Input id attribute. |
-|` min, max, step` | `Number` | `0, 100, 1` | Any number | Used in inpup type="number" to define min, max and step value acceptable.|
-|` autocomplete` | `String` | `on` | `on, off` | Input autocomplete attribute, turn it on or off. |
-|` autofocus` | `Boolean` | `false` | `true, false` | Input autofocus attribute, turn it on or off. |
-|` icon` | `String` | `null` | Font Awesome classes | Specify family and icon, i.e.: `fa-solid fa-check` |
-|` iconColor` | `String` | `text-success` | Any Tailwind CSS class | Could be one of predefined colors or any text-* Tailwind class, even in the form `text-[#ff0000]` |
-|` required` | `Boolean` | `false` | `true, false` | Input required attribute. |
-|` errorMsg` | `String` | `null` | Any string | An error message to display. |
-|` disabled` | `Boolean` | `linear` | `true, false` | Input disabled attribute. |
-|` charsCounter` | `Number` | `null` | Any integer | Enable the chars input count (spaces included) and it turns red when input length is grater than the set value` |
-|` pattern` | `String` | `null` | JavaScript regular expression | Input pattern attribute. |
+| `shape`  | `String` | `linear` | `linear, rounded, pill` | Input shape. |
+| `type` | `String` | `linear` | `text, url, email, password, tel, search` | Input type. |
+| `label` | `String` | `null` | Any string | Input label content. |
+| `name` | `String` | `linear` | Any string | Input name attribute. |
+| `mainColor` | `String` | `neutral1` | One of the twelve predefined colors | Input border in normal state. |
+| `focusColor` | `String` | `primary` | One of the twelve predefined colors | Input border and background in focus state. |
+| `placeholder` | `String` | `null` | Any string | Content of input placeholder. If shape="linear", placeholder will not display; the label is used instead. |
+| `id` | `String` | `linear` | Any string | Input id attribute. |
+| `min, max, step` | `Number` | `0, 100, 1` | Any number | Used in inpup type="number" to define min, max and step value acceptable.|
+| `autocomplete` | `String` | `on` | `on, off` | Input autocomplete attribute, turn it on or off. |
+| `autofocus` | `Boolean` | `false` | `true, false` | Input autofocus attribute, turn it on or off. |
+| `icon` | `String` | `null` | Font Awesome classes | Specify family and icon, i.e.: `fa-solid fa-check` |
+| `iconColor` | `String` | `text-success` | Any Tailwind CSS class | Could be one of predefined colors or any text-* Tailwind class, even in the form `text-[#ff0000]` |
+| `required` | `Boolean` | `false` | `true, false` | Input required attribute. |
+| `errorMsg` | `String` | `null` | Any string | An error message to display. |
+| `disabled` | `Boolean` | `linear` | `true, false` | Input disabled attribute. |
+| `charsCounter` | `Number` | `null` | Any integer | Enable the chars input count (spaces included) and it turns red when input length is grater than the set value` |
+| `pattern` | `String` | `null` | JavaScript regular expression | Input pattern attribute. |
 
 ### Buttons
 | Props | Type | Default | Values | Description |
 | :---- | :--- | :------ | :----- | :---------- |
 | `shape` | `String` | `squared` | `squared, rounded, pill` | Button shape. |
 | `outline` | `Boolean` | ` false` | `true, false` | Set button with just border and pale background.` |
-| `mainColor` | ` String` | ` primary` | `One of the twelve predefined colors` | Button color.` |
+| `mainColor` | ` String` | ` primary` | One of the twelve predefined colors | Button color.` |
 | `type` | `String` | `button` | `button, submit, reset` | Button type attribute. |
 | `text` | ` String` | ` null` | Any string | Button text content. |
-| `textColor` | ` String` | `text-white` | `Any Tailwind CSS class` | Could be one of predefined colors or any text-* Tailwind class, even in the form `text-[#ff0000]` |
+| `textColor` | ` String` | `text-white` | Any Tailwind CSS class | Could be one of predefined colors or any text-* Tailwind class, even in the form `text-[#ff0000]` |
 | `textColorOutline` | `String` | text-gray-700 dark:text-white` | `Any Tailwind CSS class` | `Could be one of predefined colors or any text-* Tailwind class, even in the form `text-[#ff0000]` |
 | `disabled` | `Boolean` | `false` | `true, false` | Button disabled attribute. |
 | `icon` | `String` | `null` | Font Awesome classes | Specify family and icon, i.e.: fa-solid fa-check |
@@ -137,9 +137,9 @@ const cities = ['Milano', 'Roma', 'Firenze', 'Torino', 'Bologna'];
 | `options` | `Array` | `[]` | An array of strings or numbers | An array of strings or numbers; arrays of objects will not work. |
 | `label` | `String` | `null` | Any string | Dropdown label content. |
 | `name` | `String` | `linear` | Any string | Dropdown name attribute. |
-| `mainColor` | `String` | `neutral1` | `One of the twelve predefined colors` | Dropdown border in normal state. |
-| `focusColor` | `String` | `primary` | `One of the twelve predefined colors` | Dropdown border and background in focus state. |
-| `listColor` | `String` | `neutral2` | `One of the twelve predefined colors` | Dropdown list background color. |
+| `mainColor` | `String` | `neutral1` | One of the twelve predefined colors | Dropdown border in normal state. |
+| `focusColor` | `String` | `primary` | One of the twelve predefined colors | Dropdown border and background in focus state. |
+| `listColor` | `String` | `neutral2` | One of the twelve predefined colors | Dropdown list background color. |
 | `defaultOption` | `String` | `null` | Any string` | `Content of dropdown default option that is the one when no value is selected. |
 | `id` | `String` | `linear` | Any string | Dropdown id attribute. |
 | `errorMsg` | `String` | `null` | Any string | An error message to display. |
@@ -152,10 +152,10 @@ const cities = ['Milano', 'Roma', 'Firenze', 'Torino', 'Bologna'];
 | `checked` |
 | `(for checkboxes)` | `Array` | `null` | An array of strings or numbers | To be used in the form `v-model:checked="["a", "b", "c"]"` to determine the checked value; can be an array of strings or numbers; arrays of objects will not work. |
 | `checked` |
-| `(for radios)` | `String, Number` | `null` | `Any string, any number` | To be used in the form v-model:checked="data.myValue" to determine the checked value. |
+| `(for radios)` | `String, Number` | `null` | Any string, any number | To be used in the form v-model:checked="data.myValue" to determine the checked value. |
 | `subLabel` | `String` | `null` | Any string | Text displayed under the label. |
 | `id` | `String` | `null` | Any string | Input `id` attribute. |
-| `mainColor` | `String` | `primary` | `One of the twelve predefined colors` | Element color in all states. |
+| `mainColor` | `String` | `primary` | One of the twelve predefined colors | Element color in all states. |
 | `name` | `String` | `null` | Any string | Input name attribute.
 
 
@@ -198,7 +198,7 @@ const cities = ['Milano', 'Roma', 'Firenze', 'Torino', 'Bologna'];
 - [Install Tailwind CSS](https://tailwindcss.com/docs/installation)
 - [Tailwind CSS Form Plugin](https://github.com/tailwindlabs/tailwindcss-forms)
 - [Tailwind CSS dark mode](https://tailwindcss.com/docs/dark-mode)
-- [font Awesome](https://fontawesome.com/docs/web/setup/get-started)
-## Authors
+- [Font Awesome](https://fontawesome.com/docs/web/setup/get-started)
+## Author
 - [OrangeWeb](https://www.orangeweb.biz)
 
