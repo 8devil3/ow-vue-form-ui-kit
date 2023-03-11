@@ -12,9 +12,6 @@ A completely free simple UI form components for Vue 3 based entirely on Tailwind
 - Four styles for buttons: linear, rounded, pill and outline (with or without icons)
 - Components are styled and set with props
 
-## Demo
-[Demo](https://www.tailwindtoolset.app)
-
 ## Requirements
 Vue 3.x, Font Awesome, Tailwind CSS 3.x and Tailwind CSS Form Plugin (see [Acknowledgements](#acknowledgements))
 
