@@ -146,8 +146,6 @@ const data = reactive({
 
 const select = ref(null);
 
-document.addEventListener('click', ()=>{data.open = false})
-
 const labelClasses = (event) => {
     if(event === null || event === '' || props.defaultOption === null){
         data.labelclasses = 'top-5 md:top-4 text-label dark:text-labelDark'
@@ -157,6 +155,8 @@ const labelClasses = (event) => {
 }
 
 onMounted(() => {
+    document.addEventListener('click', ()=>{data.open = false});
+
     labelClasses(data.selectedValue);
 
     if (select.value.hasAttribute('autofocus')) {
