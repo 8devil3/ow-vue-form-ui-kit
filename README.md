@@ -17,7 +17,7 @@ Vue 3.x, Font Awesome, Tailwind CSS 3.x and Tailwind CSS Form Plugin (see [Ackno
 
 ## Installation
 ```bash
-npm i ow-vue-form-ui-kit`
+npm i ow-vue-form-ui-kit
 ```
 
 ## Usage
