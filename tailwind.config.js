@@ -14,7 +14,7 @@ module.exports = {
                 tertiary: '#06b6d4',
                 quaternary: '#ec4899',
                 neutral1: '#6b7280',
-                neutral2: '#cbd5e1',
+                neutral2: '#f2f6fb',
                 label: '#94a3b8',
                 placeholder: '#94a3b8',
                 info: '#3b82f6',
