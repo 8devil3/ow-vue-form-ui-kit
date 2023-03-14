@@ -52,7 +52,20 @@
         </div>
         <!-- / -->
 
-        <!-- button -->
+        <!-- calendario -->
+        <div class="space-y-6">
+            <h2>Calendar</h2>
+            <DateTimePicker
+                pastDisabled
+                :timeZone="data.timeZone"
+                monthStyle="long"
+                v-model="data.date"
+            />
+            <!-- <Select :options="ianaTZ" shape="rounded" v-model="data.timeZone" /> -->
+        </div>
+        <!--  -->
+
+        <!-- pulsanti -->
         <div class="space-y-6">
             <h2>Buttons</h2>
 
@@ -174,12 +187,15 @@ import Button from './components/Button.vue';
 import Radio from './components/Radio.vue';
 import Checkbox from './components/Checkbox.vue';
 import Select from './components/Select.vue';
+import DateTimePicker from './components/DateTimePicker.vue';
+import ianaTZ from './components/ianaTZ.json';
 
 const data = reactive({
     inputValue: null,
     values: 'Milano',
     radio: 'Firenze',
-    checkbox: ['Torino', 'Firenze']
+    checkbox: ['Torino', 'Firenze'],
+    date: null
 })
 
 const cities = ['Milano', 'Roma', 'Firenze', 'Torino', 'Bologna']
