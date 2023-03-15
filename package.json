@@ -2,6 +2,19 @@
     "name": "ow-vue-form-ui-kit",
     "author": "OrangeWeb",
     "version": "1.0.12",
+    "description": "Form UI kit Vue 3, based on Tailwind CSS.",
+    "homepage": "https://www.tailwindtoolset.app/orangevue",
+    "keywords": [
+        "form-ui",
+        "vue",
+        "form",
+        "ui"
+    ],
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
     "files": [
         "dist"
     ],
@@ -14,6 +27,16 @@
             "import": "./dist/ow-vue-form-ui-kit.es.js",
             "require": "./dist/ow-vue-form-ui-kit.umd.js"
         }
+    },
+    "engines": {
+        "node": ">=14"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/8devil3/ow-vue-form-ui-kit.git"
+    },
+    "bugs": {
+        "url": "https://github.com/8devil3/ow-vue-form-ui-kit/issues"
     },
     "scripts": {
         "dev": "vite",
