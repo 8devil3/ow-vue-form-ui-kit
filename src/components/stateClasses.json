@@ -112,5 +112,21 @@
             "warning": "border-warning text-warning focus:ring-warning/50 focus-visible:ring-warning/50 dark:border-warningDark dark:text-warningDark dark:focus:ring-warningDark/50 dark:focus-visible:ring-warningDark/50",
             "danger": "border-danger text-danger focus:ring-danger/50 focus-visible:ring-danger/50 dark:border-dangerDark dark:text-dangerDark dark:focus:ring-dangerDark/50 dark:focus-visible:ring-dangerDark/50"
         }
+    },
+    "toggle": {
+        "mainColors": {
+            "primary": "bg-primary dark:bg-primaryDark",
+            "secondary": "bg-secondary dark:bg-secondaryDark",
+            "tertiary": "bg-tertiary dark:bg-tertiaryDark",
+            "quaternary": "bg-quaternary dark:bg-quaternaryDark",
+            "neutral1": "bg-neutral1 dark:bg-neutral1Dark",
+            "neutral2": "bg-neutral2 dark:bg-neutral2Dark",
+            "label": "bg-label dark:bg-labelDark",
+            "placeholder": "bg-placeholder dark:bg-placeholderDark",
+            "info": "bg-info dark:bg-infoDark",
+            "success": "bg-success dark:bg-successDark",
+            "warning": "bg-warning dark:bg-warningDark",
+            "danger": "bg-danger dark:bg-dangerDark"
+        }
     }
 }

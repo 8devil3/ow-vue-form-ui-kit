@@ -52,6 +52,16 @@
         </div>
         <!-- / -->
 
+        <!-- Toggle -->
+        <form>
+            <Toggle />
+            <br>
+            <br>
+            <br>
+            <Button type="submit" text="submit" />
+        </form>
+        <!-- / -->
+
         <!-- calendario -->
         <div class="space-y-6">
             <h2>Calendar</h2>
@@ -186,6 +196,7 @@ import Button from './components/Button.vue';
 import Radio from './components/Radio.vue';
 import Checkbox from './components/Checkbox.vue';
 import Select from './components/Select.vue';
+import Toggle from './components/Toggle.vue';
 import DateTimePicker from './components/DateTimePicker.vue';
 
 const data = reactive({
