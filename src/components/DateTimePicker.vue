@@ -4,7 +4,9 @@
             class="flex items-center justify-between w-full text-sm leading-none text-left text-opacity-50 bg-transparent md:text-base focus:ring-2 focus:outline-none focus-visible:outline-none placeholder:text-placeholder disabled:placeholder-opacity-50 disabled:border-opacity-50"
             :class="[stateClasses.inputs.shapes['rounded'], stateClasses.inputs.mainColors['neutral1'], stateClasses.inputs.focusColors['primary']]"
         >
-            {{ data.selectedDate.toLocaleDateString('it-IT', {year: 'numeric', month: props.monthStyle, day: '2-digit'}) }}
+            <template v-if="data.selectedDate">{{ data.selectedDate.toLocaleDateString('it-IT', {year: 'numeric', month: props.monthStyle, day: '2-digit'}) }}</template>
+            
+            <span v-else class="text-placeholder">{{ props.placeholder }}</span>
 
             <i class="text-xs md:text-sm fa-solid fa-calendar-days text-primary dark:text-primaryDark"></i>
         </button>
@@ -94,13 +96,10 @@ import { reactive } from 'vue';
 import stateClasses from './stateClasses.json';
 
 const props = defineProps({
+    modelValue: String,
     locale: {
         type: String,
         default: 'it-IT'
-    },
-    modelValue: {
-        type: Date,
-        default: new Date()
     },
     pastDisabled: {
         type: Boolean,
@@ -109,6 +108,10 @@ const props = defineProps({
     monthStyle: {
         type: String,
         default: '2-digit'
+    },
+    placeholder: {
+        type: String,
+        default: 'Select date'
     }
 });
 
@@ -148,7 +151,7 @@ const data = reactive({
     firstDayIndex: ()=>{return data.newDate.getDay()},
     lastDayIndex: ()=>{return new Date(data.newDate.getFullYear(), data.newDate.getMonth(), 0).getDay()},
     nextDays: ()=>{return 42 - data.lastDayIndex() - data.lastDay() -1},
-    selectedDate: props.modelValue ? props.modelValue : new Date(),
+    selectedDate: new Date(props.modelValue),
     open: false
 });
 
@@ -162,13 +165,18 @@ const prevMonth = () => {
 
 const selectDate = (day, month) => {
     data.selectedDate = new Date(data.newDate.getFullYear(), month, day);
-    emits('update:model-value', new Date(data.selectedDate))
+
+    data.selectedDate.setHours(0, -data.selectedDate.getTimezoneOffset(), 0, 0); //rimuovo l'offset del fuso orario
+    
+    emits('update:model-value', data.selectedDate.toISOString());
     // data.open = false;
 }
 
 const selectedDateClasses = (day, month) => {
-    console.log(data.selectedDate, new Date(data.newDate.getFullYear(), month, day)) //TODO: data.selectedDate ritorna la data completa di ora e mmllisecondi, ma a me interessa solo la data...
-    if(data.selectedDate === new Date(data.newDate.getFullYear(), month, day)){
+    data.selectedDate.setHours(0, -data.selectedDate.getTimezoneOffset(), 0, 0); //rimuovo l'offset del fuso orario
+    let calendarDate = new Date(data.newDate.getFullYear(), month, day).setHours(0, -data.selectedDate.getTimezoneOffset(), 0, 0)
+
+    if(+data.selectedDate === +calendarDate){
         return 'border-2 border-primary dark:border-primaryDark bg-primary dark:bg-primaryDark';
     }
 }
@@ -178,7 +186,10 @@ const selectedDateClasses = (day, month) => {
 // }
 
 const todayClass = (day, month)=>{
-    if(+new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()) === +new Date(data.newDate.getFullYear(), month, day)){
+    let today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).setHours(0, -data.selectedDate.getTimezoneOffset(), 0, 0); //rimuovo l'offset del fuso orario
+    let calendarDate = new Date(data.newDate.getFullYear(), month, day).setHours(0, -data.selectedDate.getTimezoneOffset(), 0, 0); //rimuovo l'offset del fuso orario
+    
+    if(+today === +calendarDate){
         return 'rounded-full border-2 border-primary/50';
     }
 }

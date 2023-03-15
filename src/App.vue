@@ -57,7 +57,6 @@
             <h2>Calendar</h2>
             <DateTimePicker
                 pastDisabled
-                :timeZone="data.timeZone"
                 monthStyle="long"
                 v-model="data.date"
             />
@@ -188,14 +187,13 @@ import Radio from './components/Radio.vue';
 import Checkbox from './components/Checkbox.vue';
 import Select from './components/Select.vue';
 import DateTimePicker from './components/DateTimePicker.vue';
-import ianaTZ from './components/ianaTZ.json';
 
 const data = reactive({
     inputValue: null,
     values: 'Milano',
     radio: 'Firenze',
     checkbox: ['Torino', 'Firenze'],
-    date: null
+    date: new Date().toISOString()
 })
 
 const cities = ['Milano', 'Roma', 'Firenze', 'Torino', 'Bologna']
